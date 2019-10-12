@@ -102,6 +102,7 @@ php artisan storage:link
     ln -s root_folder/storage/app/public root_folder/public/storage
 
 - Create MySQL database. You should do this manually based on your favourite client. I am using Sequel Pro and I created a database called basic_crm as I defined in the .env file
+
  ![Create Database 1](https://crm.smartclass.tech/img/db1.png)
  ![Create Database 2](https://crm.smartclass.tech/img/db2.png)
 
@@ -111,6 +112,7 @@ php artisan migrate
 ````
 
 - After migration you should be able to see the tables in your database as below
+
 ![Create Database 3](https://crm.smartclass.tech/img/db3.png)
 
 - Now let's add some mock data. Before creating mock data, as a best practise we need to run the following command to regenerate Composer's autoloader.
