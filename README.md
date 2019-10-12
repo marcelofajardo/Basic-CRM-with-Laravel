@@ -1,6 +1,6 @@
 # Basic CRM Application
 
-Basic CRM Application developed with PHP Framework Laravel.
+Basic CRM Application developed with Laravel PHP Framework.
 
 ## Prerequisites
 
@@ -17,18 +17,18 @@ Basic CRM Application developed with PHP Framework Laravel.
 
 ## Installation
 
-- clone github repo
+- Clone github repo
 ```shell script
 git clone https://github.com/simsek97/Basic-CRM-with-Laravel.git
 ````
  
-- optionally you can change the name of the folder. I changed it to be **crm**
+- Optionally you can change the name of the folder. I will change it to be **crm** with the following command
 
 ````shell script
 mv Basic-CRM-with-Laravel crm
 ````
 
-- go to the created folder which will be Basic-CRM-with-Laravel
+- Go to the created folder which will be Basic-CRM-with-Laravel
 
 ```shell script
 cd crm
@@ -41,27 +41,27 @@ sudo chmod -R o+rw storage
 sudo chmod -R o+rw bootstrap/cache
 ````
  
-- install js packages by npm _(This step is not necessary to run the application as it is already built for production. But if you are planning to make developments you need to install node modules.)_
+- Install js packages by npm _(This step is not necessary to run the application as it is already built for production. But if you are planning to make developments you need to install node modules.)_
 ````shell script
 npm install
 ````
 
-- install php packages by composer
+- Install php packages by composer
 ````shell script
 composer install
 ````
 
-- create .env file (As github repository does not include .env file, we need to create it by copying .env.example)
+- Create .env file (As github repository does not include .env file, we need to create it by copying .env.example)
 ````shell script
 cp .env.example .env
 ````
 
-- generate application key (This is important for security. If the application key is not set, sessions and other encrypted data will not be secure!)
+- Generate application key (This is important for security. If the application key is not set, sessions and other encrypted data will not be secure!)
 ````shell script
 php artisan key:generate
 ````
 
-- open .env file and edit necessary config
+- Open .env file and edit necessary config
 
 ````shell script
 nano .env
