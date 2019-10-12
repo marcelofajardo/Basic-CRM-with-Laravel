@@ -95,10 +95,9 @@ MAIL_PASSWORD=xxx
 php artisan storage:link
 ````
 
-- This command is basically creating a symbolic link from public/storage to storage/app/public so that you can add it manually by the following command alternatively but I would recommend using artisan command.
-````shell script
-ln -s root_folder/storage/app/public root_folder/public/storage
-````
+    This command is basically creating a symbolic link from public/storage to storage/app/public so that you can add it manually by the following command alternatively but I would recommend using artisan command.
+    
+    ln -s root_folder/storage/app/public root_folder/public/storage
 
 - Create MySQL database. You should do this manually based on your favourite client. I am using Sequel Pro and I created a database called basic_crm as I defined in the .env file
  ![Create Database 1](https://crm.smartclass.tech/img/db1.png)
