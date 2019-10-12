@@ -41,14 +41,15 @@ sudo chmod -R o+rw storage
 sudo chmod -R o+rw bootstrap/cache
 ````
  
-- Install js packages by npm _(This step is not necessary to run the application as it is already built for production. But if you are planning to make developments you need to install node modules.)_
+- Install js packages by npm _(This step is not necessary to run the application as it is already built.
+But if you are planning to make developments you need to install node modules.)_
 ````shell script
 npm install
 ````
 
 - Install php packages by composer
 ````shell script
-composer install
+composer install --optimize-autoloader --no-dev
 ````
 
 - Create .env file (As github repository does not include .env file, we need to create it by copying .env.example)
@@ -100,6 +101,11 @@ php artisan storage:link
     
     ln -s root_folder/storage/app/public root_folder/public/storage
 
+- As a best practise, you might want to run the following command for performance.
+````shell script
+php artisan config:cache
+````
+
 - Create MySQL database. You should do this manually based on your favourite client. I am using Sequel Pro and I created a database called basic_crm as I defined in the .env file
  ![Create Database 1](https://crm.smartclass.tech/img/db1.png)
  ![Create Database 2](https://crm.smartclass.tech/img/db2.png)
@@ -112,19 +118,7 @@ php artisan migrate
 - After migration you should be able to see the tables in your database as below
 ![Create Database 3](https://crm.smartclass.tech/img/db3.png)
 
-- Now let's add some mock data. Before creating mock data, as a best practise we need to run the following command to regenerate Composer's autoloader.
-````shell script
-composer dump-autoload
-```` 
-
-- As a best practise, you might want to run the following commands in production for performance.
-````shell script
-composer install --optimize-autoloader --no-dev
-php artisan config:cache
-````
-
-
-There are already factory and seed files in the repository so that the only thing we need to do is to run the following command in order to generate mock data
+- Now let's add some mock data. There are already factory and seed files in the repository so that the only thing we need to do is to run the following command in order to generate mock data
 ````shell script
 php artisan db:seed
 ````
