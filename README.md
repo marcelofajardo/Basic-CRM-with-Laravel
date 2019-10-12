@@ -73,7 +73,6 @@ if you would like to send email through the application
 Add appropriate values for xxx
 ```text
 APP_NAME='Simple CRM'
-APP_ENV=prod
 APP_DEBUG=false
 
 DB_CONNECTION=mysql
