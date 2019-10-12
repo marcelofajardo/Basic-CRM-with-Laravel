@@ -167,3 +167,4 @@ Using API tokens, one can get to use APIs with several ways as below by using Gu
     ]);
     ```` 
 
+- CRM has multi language support. Currently English and Spanish have translations for dashboard. If you need more you are welcome to edit language files.
