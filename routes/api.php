@@ -60,9 +60,9 @@ Route::middleware('auth:api')->post('/employees', function(Request $request) {
 });
 //update a employee
 Route::middleware('auth:api')->put('/employees/{id}', function(Request $request, $id) {
-    $article = Employee::findOrFail($id);
-    $article->update($request->all());
-    return $article;
+    $employee = Employee::findOrFail($id);
+    $employee->update($request->all());
+    return $employee;
 });
 //delete a employee
 Route::middleware('auth:api')->delete('/employees/{id}', function($id) {
