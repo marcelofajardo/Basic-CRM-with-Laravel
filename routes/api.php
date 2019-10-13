@@ -46,25 +46,25 @@ Route::middleware('auth:api')->delete('/companies/{id}', function($id) {
  * API Routes for Employees
  */
 
-//show all companies
+//show all employees
 Route::middleware('auth:api')->get('employees', function() {
     return Employee::all();
 });
-//show one company
+//show one employee
 Route::middleware('auth:api')->get('/employees/{id}', function($id) {
     return Employee::find($id);
 });
-//insert a company
+//insert a employee
 Route::middleware('auth:api')->post('/employees', function(Request $request) {
     return Employee::create($request->all());
 });
-//update a company
+//update a employee
 Route::middleware('auth:api')->put('/employees/{id}', function(Request $request, $id) {
     $article = Employee::findOrFail($id);
     $article->update($request->all());
     return $article;
 });
-//delete a company
+//delete a employee
 Route::middleware('auth:api')->delete('/employees/{id}', function($id) {
     Employee::find($id)->delete();
     return 204;
