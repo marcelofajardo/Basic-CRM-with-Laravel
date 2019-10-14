@@ -28,7 +28,7 @@ git clone https://github.com/simsek97/Basic-CRM-with-Laravel.git
 mv Basic-CRM-with-Laravel crm
 ````
 
-- Go to the created folder which will be Basic-CRM-with-Laravel
+- Go to the created folder which will be crm
 
 ```shell script
 cd crm
